@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 
 interface MockDataProps {
-  data: string;
+  data: any;
 }
 
 export default function index({ data }: MockDataProps): ReactElement {

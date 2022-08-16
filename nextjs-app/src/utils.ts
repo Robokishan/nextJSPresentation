@@ -14,3 +14,15 @@ export const getServerSideProps = async (): Promise<
     return { props: { mockAddress: {} } };
   }
 };
+
+export const getStaticProps = async (): Promise<any> => {
+  try {
+    const data = await fetch(
+      "https://random-data-api.com/api/address/random_address"
+    );
+    const mockAddress = await data.json();
+    return { props: { mockAddress: mockAddress } };
+  } catch (error) {
+    return { props: { mockAddress: {} } };
+  }
+};

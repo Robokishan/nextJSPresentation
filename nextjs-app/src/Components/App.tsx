@@ -2,7 +2,7 @@ import { useState } from "react";
 import LongText from "./LongText";
 import MockData from "./MockData";
 
-function App(props) {
+function App(props: any) {
   const [count, setCount] = useState(0);
 
   return (
