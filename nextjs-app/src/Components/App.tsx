@@ -1,7 +1,8 @@
 import { useState } from "react";
 import LongText from "./LongText";
+import MockData from "./MockData";
 
-function App() {
+function App(props) {
   const [count, setCount] = useState(0);
 
   return (
@@ -28,6 +29,7 @@ function App() {
           Click on the Vite and React logos to learn more
         </p>
       </div>
+      <MockData data={props.props.mockAddress} />
       <LongText />
     </div>
   );
