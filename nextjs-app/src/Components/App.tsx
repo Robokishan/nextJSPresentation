@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-no-target-blank */
+/* eslint-disable @next/next/no-img-element */
 import { useState } from "react";
 import LongText from "./LongText";
 import MockData from "./MockData";
