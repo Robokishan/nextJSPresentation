@@ -7,5 +7,5 @@
     "@typescript-eslint/no-explicit-any": "off"
   },
   "plugins": ["@typescript-eslint"],
-  "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"]
 }
