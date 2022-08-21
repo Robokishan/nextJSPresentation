@@ -12,14 +12,13 @@ interface PropsI {
 }
 
 const Home: NextPage<PropsI> = ({ pokemons }) => {
-  
   return (
     <>
       <Layout title="Mi pokeApp">
         <Grid.Container gap={2}>
           {pokemons.length > 0 &&
-            pokemons.map( pokemon => (
-             <PokemonCard pokemon={pokemon}  key={pokemon.id} />
+            pokemons.map((pokemon) => (
+              <PokemonCard pokemon={pokemon} key={pokemon.id} />
             ))}
         </Grid.Container>
       </Layout>
@@ -29,7 +28,7 @@ const Home: NextPage<PropsI> = ({ pokemons }) => {
 
 export default Home;
 
-export const getStaticProps: GetStaticProps = async (ctx) => {
+export const getServerSideProps: GetStaticProps = async (ctx) => {
   const { data } = await pokeApi.get<PokeApiI>("/pokemon?limit=151");
 
   const pokemons: PokemonInfoI[] = data.results.map((pokemon, i) => ({
