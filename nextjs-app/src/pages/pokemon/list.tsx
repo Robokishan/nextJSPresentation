@@ -1,4 +1,4 @@
-import { GetStaticProps, NextPage } from "next";
+import { GetServerSideProps, NextPage } from "next";
 
 import { Grid } from "@nextui-org/react";
 
@@ -28,7 +28,7 @@ const Home: NextPage<PropsI> = ({ pokemons }) => {
 
 export default Home;
 
-export const getServerSideProps: GetStaticProps = async (ctx) => {
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { data } = await pokeApi.get<PokeApiI>("/pokemon?limit=151");
 
   const pokemons: PokemonInfoI[] = data.results.map((pokemon, i) => ({

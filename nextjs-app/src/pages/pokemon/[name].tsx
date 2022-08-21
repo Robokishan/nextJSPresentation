@@ -1,4 +1,4 @@
-import { GetStaticProps, NextPage } from "next";
+import { GetServerSideProps, NextPage } from "next";
 
 import { Card, Grid, Text } from "@nextui-org/react";
 import { useRouter } from "next/router";
@@ -45,7 +45,7 @@ const PokemonPage: NextPage<Props> = ({ pokemon }) => {
 
 export default PokemonPage;
 
-export const getServerSideProps: GetStaticProps = async ({ params }) => {
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const { name } = params as { name: string };
 
   const { data } = await pokeApi.get<PokemonI>(`/pokemon/${name}`);
