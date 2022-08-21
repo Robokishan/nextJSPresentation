@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import App from "../Components/App";
 
-export { getServerSideProps } from "../utils";
+export { getServerSideProps } from "../utils/utils";
 
 const Home: NextPage = (props) => {
   return (

@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import App from "../Components/App";
 
-export { getStaticProps } from "../utils";
+export { getStaticProps } from "../utils/utils";
 
 const StaticHome: NextPage = (props) => {
   return (
