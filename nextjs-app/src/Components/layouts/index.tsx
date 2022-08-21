@@ -4,7 +4,7 @@ import Head from "next/head";
 import { NavBar } from "../ui";
 
 interface PropsI {
-  children: React.ReactNode | Element;
+  children: React.ReactNode;
   title?: string;
 }
 

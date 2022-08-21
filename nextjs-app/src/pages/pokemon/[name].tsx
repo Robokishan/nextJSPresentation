@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import { GetStaticPaths, NextPage, GetStaticProps } from "next";
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
-import { Button, Card, Container, Grid, Image, Text } from "@nextui-org/react";
+import { Card, Grid, Text } from "@nextui-org/react";
 
 import confetti from "canvas-confetti";
 
@@ -48,15 +48,11 @@ const PokemonPage: NextPage<Props> = ({ pokemon }) => {
       });
   };
 
-  // useEffect(() => {
-  //   setIsInFavorites(localFavorites.existInFavorite(pokemon.id));
-  // }, [])
-
   return (
     <>
       <Layout title={`${pokemon.name}`}>
         <Grid.Container gap={2}>
-          <Text h1 transform="capitalize">
+          <Text margin="0 auto" h1 transform="capitalize">
             {" "}
             {pokemon.name}{" "}
           </Text>
