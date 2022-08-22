@@ -11,8 +11,8 @@ function App(props: any) {
     <div id="root">
       <div className="App">
         <div>
-          <a href="https://vitejs.dev" target="_blank">
-            <img src="/vite.svg" className="logo" alt="Vite logo" />
+          <a href="https://nextjs.org/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" className="logo" alt="Next logo" />
           </a>
           <a href="https://reactjs.org" target="_blank">
             <img src="/react.svg" className="logo react" alt="React logo" />
